@@ -54,6 +54,8 @@ services:
       - db
     env_file:
       - env
+      extra_hosts:
+        - "local.magento magento192.local:127.0.0.1" # Give Magento access to its own SOAP WSDL file from the outside in.
   db:
     image: mysql:5.6.23
     volumes:
@@ -70,7 +72,14 @@ volumes:
   db-data:
 ```
 
-Then use `docker-compose up -d` to start MySQL and Magento server.
+Then use `./start.sh` to start MySQL and Magento server. Follow instructions.
+
+Use `./logs.sh` to watch the logs from all containers.
+
+Use `./stop.sh` to stop containers without removing them.
+
+Use `./remove.sh` to stop and remove containers, network and images.
+
 
 ## Magento sample data
 
