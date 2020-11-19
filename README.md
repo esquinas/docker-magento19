@@ -72,11 +72,11 @@ volumes:
   db-data:
 ```
 
-Then use `./start.sh` to start MySQL and Magento server. Follow instructions.
+Then use `./init.sh` to create and start MySQL and Magento server. Follow instructions.
 
 Use `./logs.sh` to watch the logs from all containers.
 
-Use `./stop.sh` to stop containers without removing them.
+Use `./stop.sh` to stop containers without removing them. Then use `./start.sh` to start them again.
 
 Use `./remove.sh` to stop and remove containers, network and images.
 
